@@ -2,6 +2,21 @@
 
 I put this here mostly so I can quickly setup my terminal and kali machine with my tmux and ohmytmux config as well as to run my tmux recon scripts.  I hope someone else finds this useful.
 
+Update: You can now just use the install.sh script:
+
+```bash
+curl https://raw.githubusercontent.com/rpriven/tmux-recon/main/install.sh | sh
+```
+
+- Backs up any existing .tmux.conf and .tmux.conf.local files
+- Installs OhMyZsh!
+- Downloads the tmux-recon files and puts them in the home folder
+- Installs arsenal
+- Adds aliases to .bash_aliases, .zshrc and .bashrc
+
+Might need to test this a bit more, but seems to work ok.  Please use caution and back up your own configs if they are important.
+- It seems like there is now an issue with the 'recon' alias as there is now an apt package with that name, so I will be releasing an update to change the name of the alias so it works right again.
+
 ## Description
 
 This creates bash aliases for recon and discovery that when run open multiple tmux panes to run various scans and saves the results in your current directory.
