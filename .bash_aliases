@@ -88,9 +88,3 @@ transfer() {
     ls
     python3 -m http.server 80
 }
-
-
-# VPN
-alias vpn-htb='sudo openvpn ~/htb/vip21_enphix.ovpn'
-alias vpn-thm='sudo openvpn ~/tryhackme/djedi.riven.ovpn'
-alias vpn-cr='sudo openvpn ~/cyberranges/enphix-6e020607-4742-4eda-892c-0cd4552a419a.ovpn'
