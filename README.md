@@ -1,6 +1,6 @@
 # tmux-recon
 
-## Customized TMux Configuration for CTFs
+## Customized Tmux Configuration
 This script installs my customized Tmux configuration, featuring OhMyTmux, arsenal, and custom aliases designed for automated network and machine scanning. This setup is optimized for Capture The Flag (CTF) competitions and practice scenarios, rather than real-world penetration testing.
 
 ### Features:
