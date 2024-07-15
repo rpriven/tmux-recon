@@ -1,5 +1,18 @@
 # tmux-recon
 
+## Customized TMux Configuration for CTFs
+This script installs my customized Tmux configuration, featuring OhMyTmux, arsenal, and custom aliases designed for automated network and machine scanning. This setup is optimized for Capture The Flag (CTF) competitions and practice scenarios, rather than real-world penetration testing.
+
+### Features:
+- OhMyTmux Integration: Enhances TMux with a sleek and powerful configuration.
+- Automated Scanning Tools: Includes a comprehensive arsenal for network and machine scanning.
+- Convenient Aliases: Streamlines your workflow with predefined aliases.
+
+#### Intended Use:
+This configuration is specifically tailored for CTFs and practice environments, providing a powerful and efficient setup for honing your skills.
+
+---
+
 I put this here mostly so I can quickly setup my terminal and kali machine with my tmux and ohmytmux config as well as to run my tmux recon scripts.  I hope someone else finds this useful.
 
 You can now just install these dependencies and use the install.sh script:
