@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # tmux-recon install script
+sudo apt install -y curl git python3 pip python3-pip pipx tmux
 
 # if exists, creates backups of configs
 if [[ ~/.tmux.conf -f ]]; then
