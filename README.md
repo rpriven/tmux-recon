@@ -2,9 +2,10 @@
 
 I put this here mostly so I can quickly setup my terminal and kali machine with my tmux and ohmytmux config as well as to run my tmux recon scripts.  I hope someone else finds this useful.
 
-Update: You can now just use the install.sh script:
+You can now just install these dependencies and use the install.sh script:
 
 ```bash
+sudo apt install -y curl git python3 pip python3-pip pipx tmux
 curl https://raw.githubusercontent.com/rpriven/tmux-recon/main/install.sh | sh
 ```
 
