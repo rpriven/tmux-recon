@@ -63,6 +63,17 @@ def install_recommended():
         else:
             print_color(f"[OK] {prog}", GREEN)
 
+def install_oh_my_tmux():
+    print_color("[+] Installing Oh My Tmux!...", CYAN)
+    tmux_dir = HOME / ".tmux"
+    if not tmux_dir.exists():
+        run_cmd("git clone --single-branch https://github.com/gpakosz/.tmux.git ~/.tmux")
+        run_cmd("ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf")
+        run_cmd("cp ~/.tmux/.tmux.conf.local ~/.tmux.conf.local")
+        print_color("[OK] Oh My Tmux! installed", GREEN)
+    else:
+        print_color("[i] Oh My Tmux! already installed. Skipping.", YELLOW)
+
 def install_dev():
     print_color("[+] Installing developer tools...", CYAN)
     dev_tools = ["git", "docker.io", "docker-compose", "cmake"]
@@ -216,4 +227,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
