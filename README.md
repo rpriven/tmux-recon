@@ -1,5 +1,102 @@
-# tmux-recon
+# �️ install.py – Modular Installer for Dev, Sec, and Recon Tools
 
-Portable tmux-based terminal bootstrap setup with ZSH, tools, aliases, plugins, and more.
+This is a Python-based modular installer script designed to quickly set up your preferred dev environment, recon tools, and [ProjectDiscovery](https://github.com/projectdiscovery) suite with minimal hassle. Whether you're spinning up a fresh VM, container, or workstation, `install.py` handles all the heavy lifting.
 
-Updates coming soon...
+---
+
+## � Features
+
+- � **Developer Tools**: Installs Docker, Git, Miniconda, and more
+- � **Recon Arsenal**: Pulls top-tier open-source recon tools
+- �️‍♂️ **ProjectDiscovery Support**: Installs `pdtm` and optionally all supported tools
+- � **Golang Installer**: Smart Go install with PATH updates
+- � **Cleanup Options**: Use `--clean` to wipe broken installs
+- � **Intelligent**: Skips installs if already present, checks integrity
+- � **Shell Updates**: Injects env changes into `.bashrc`/`.zshrc`
+
+---
+
+## � Usage
+
+Clone this repo and run:
+
+```bash
+python3 install.py [OPTIONS]
+```
+
+### Available Flags:
+
+| Flag         | Description                                               |
+|--------------|-----------------------------------------------------------|
+| `--all`      | Installs everything (Dev + Arsenal + ProjectDiscovery)    |
+| `--dev`      | Installs developer tooling (docker, git, miniconda, etc.) |
+| `--arsenal`  | Installs recon tools and common utilities                 |
+| `--pdtm`     | Installs ProjectDiscovery tools                           |
+| `--clean`    | Removes broken or partial installations (e.g., conda)     |
+| `--dry-run`  | Prints planned actions but makes no changes               |
+
+---
+
+## � Notes
+
+- Make sure to **`source ~/.bashrc` or `~/.zshrc`** after running to apply path/env updates.
+- If you skip full ProjectDiscovery install, you can always run later:
+
+```bash
+pdtm -install-all
+```
+
+- Tools are installed under your home directory when possible.
+- Requires `sudo` for some packages (e.g., docker, go).
+
+---
+
+## � Tested On
+
+- ✅ Ubuntu 20.04 / 22.04
+- ✅ Debian-based containers
+- � Compatible with Docker and ephemeral environments
+
+---
+
+## � Tools Included (Sample)
+
+### Developer Tools:
+- `git`
+- `docker.io`
+- `docker-compose`
+- `miniconda` (conda CLI)
+
+### Recon Arsenal:
+- `httpx`
+- `subfinder`
+- `nuclei`
+- `amass`
+- `ffuf`
+- `massdns`
+
+### ProjectDiscovery:
+- `pdtm` (tool manager)
+- All tools available via: `pdtm -install-all`
+
+---
+
+## � Cleanup
+
+If something goes wrong or you want to start fresh:
+
+```bash
+python3 install.py --clean
+```
+
+---
+
+## � Contributions Welcome
+
+Feel free to open a PR if you want to add new tools, distros, or enhancements!
+
+---
+
+## � License
+
+MIT License
